@@ -20,7 +20,7 @@ jobs:
         with:
               node-version: '16.x'
       - run: npm i pnpm -g
-      - run: pnpm i
+      - run: pnpm install --no-frozen-lockfile
       - run: pnpm run build # 打包
         # 部署到 GitHub pages
       - name: Deploy
