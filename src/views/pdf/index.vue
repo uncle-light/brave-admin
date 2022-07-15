@@ -4,7 +4,7 @@
       ref="pdfCotainer"
       width="100%"
       height="100%"
-      src="http://pdf.pluss.top"
+      src="https://pdf.pluss.top"
     ></iframe>
   </div>
 </template>
