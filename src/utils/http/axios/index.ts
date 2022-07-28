@@ -5,10 +5,10 @@ import axios, {
   type AxiosStatic,
   type Canceler,
 } from "axios";
-import { useMessage } from "naive-ui";
+import { createDiscreteApi } from "naive-ui";
+const { message } = createDiscreteApi(["message"]);
 const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 const CancelToken = axios.CancelToken;
-
 type Job = {
   url: string;
   retryNum: number;
@@ -118,7 +118,7 @@ class Request extends RequestQueue {
         Request.removeJob(url);
         if (status >= 200 && status < 300) {
           if (data.code !== 200) {
-            useMessage().error(response.data.errorMessage as string);
+            message.error(response.data.errorMessage as string);
             return Promise.reject(response.data);
           }
           return Promise.resolve(response.data);
@@ -132,7 +132,7 @@ class Request extends RequestQueue {
         }
         const url = `${error.config.method} ${error.config.url}`;
         Request.removeJob(url);
-        useMessage().error("服务异常，请稍后再试");
+        message.error("服务异常，请稍后再试");
         return Promise.reject(error);
       }
     );
