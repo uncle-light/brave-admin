@@ -1,1 +1,0 @@
-import{_ as a,E as s,am as n,O as r,an as t,P as e}from"./index.c2049165.js";const o={},u=e("没有标题");var c=a(o,[["render",function(a,e){const o=t;return s(),n(o,null,{default:r((()=>[u])),_:1})}]]);export{c as default};

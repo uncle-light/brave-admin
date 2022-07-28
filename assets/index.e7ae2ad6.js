@@ -1,0 +1,1 @@
+import{_ as a,E as s,al as e,P as n,am as r,Q as t}from"./index.b8e6de85.js";const o={},d=t("没有标题");var l=a(o,[["render",function(a,t){const o=r;return s(),e(o,null,{default:n((()=>[d])),_:1})}]]);export{l as default};
